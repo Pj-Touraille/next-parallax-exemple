@@ -1,0 +1,13 @@
+services:
+    webapp:
+        image: node:18-bullseye-slim
+        container_name: webapp
+        environment:
+            NODE_ENV: development
+        working_dir: /app
+        volumes:
+            - .:/app
+        ports:
+            - "3000:3000"
+        command:
+            sh -c "yarn && yarn dev"
