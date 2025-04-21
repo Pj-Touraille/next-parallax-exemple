@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+    distDir: "build",
+    sassOptions: {
+        implementation: "sass",
+        prependData: `@import "@/styles/variables.scss";`,
+    },
 };
 
 export default nextConfig;

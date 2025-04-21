@@ -1,0 +1,40 @@
+.section {
+    position: relative;
+    height: 200vh;
+    width: 100%;
+
+    .container {
+        position: sticky;
+        top: 0;
+        bottom: 0;
+        height: 100vh;
+        width: 100%;
+
+        .banner {
+            height: 100%;
+            width: 100%;
+
+            .layer {
+                z-index: -1;
+
+                & {
+                    height: 100%;
+                    width: 100%;
+                    background-color: aliceblue;
+                }
+
+                &2 {
+                    background-color: darkgoldenrod;
+                    height: 50%;
+                    margin-top: 25%;
+                    transform: translateX(-50%);
+                }
+            }
+            
+            .content {
+                width: 100%;
+                color: $background-color;
+            }
+        }
+    }
+}
