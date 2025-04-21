@@ -25,14 +25,15 @@
 
                 &2 {
                     background-color: darkgoldenrod;
-                    height: 50%;
-                    margin-top: 25%;
+                    height: 50vh;
+                    margin-top: 25vh;
                     transform: translateX(-50%);
                 }
             }
-            
+
             .content {
                 width: 100%;
+                height: 100%;
                 color: $background-color;
             }
         }
