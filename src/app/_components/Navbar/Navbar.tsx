@@ -4,15 +4,13 @@ import { useEffect, useState } from 'react';
 import styles from './navbar.module.scss';
 
 export default function Navbar() {
-    const [isVisible, setIsVisible] = useState(false);
+    const [isHidden, setIsHidden] = useState(true);
 
     const handleScroll = () => {
-        console.log(window.scrollY);
-
-        if (window.scrollY > 50) {
-            setIsVisible(true);
+        if (window.scrollY >= window.innerHeight) {
+            setIsHidden(false);
         } else {
-            setIsVisible(false);
+            setIsHidden(true);
         }
     }
 
@@ -26,7 +24,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav className={styles.header} hidden={!isVisible}>
+        <nav className={styles.header} hidden={isHidden}>
             <h1>Header</h1>
         </nav>
     );
