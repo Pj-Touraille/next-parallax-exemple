@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
     distDir: "build",
     sassOptions: {
         implementation: "sass",
-        prependData: `@import "@/styles/variables.scss"; @import "@/styles/mixins.scss";`,
+        prependData: `@use "@/styles/variables.scss" as *; @use "@/styles/mixins.scss" as *;`,
     },
 };
 

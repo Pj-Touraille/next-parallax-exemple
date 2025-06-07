@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        {Array.from({ length: 10 }, (_, i) => (
+        {Array.from({ length: 4 }, (_, i) => (
           <ParallaxSection key={i} params={{ i }} />
         ))}
       </main>
